@@ -5,6 +5,7 @@ import { LogOut, User, Moon, Sun, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import { toast } from "sonner";
+import { BrandWordmark } from "@/components/ui/brand-wordmark";
 
 export function Header() {
   const { data: session } = useSession();
@@ -23,9 +24,10 @@ export function Header() {
   const user = session?.user;
 
   return (
-    <header className="flex h-16 items-center justify-between border-b bg-background/80 px-6 backdrop-blur-md">
+    <header className="flex h-16 items-center shadow justify-between bg-background/80 px-6 backdrop-blur-md">
       <div className="flex items-center gap-3">
-        <div className="flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+        <BrandWordmark className="text-base md:hidden" />
+        <div className="hidden items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary sm:flex">
           <Shield className="h-3.5 w-3.5" />
           <span>SaaS Admin Portal</span>
         </div>
@@ -45,7 +47,7 @@ export function Header() {
         </Button>
 
         {/* User Info & Logout */}
-        <div className="flex items-center gap-3 border-l pl-3">
+        <div className="flex items-center gap-3 pl-3">
           <div className="hidden sm:flex flex-col text-right">
             <span className="text-sm font-semibold leading-none text-foreground">
               {user?.name || "SaaS Administrator"}

@@ -10,6 +10,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { BrandWordmark } from "@/components/ui/brand-wordmark";
 
 const navItems = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
@@ -22,16 +23,14 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-64 flex-col border-r bg-card/70 backdrop-blur-md hidden md:flex h-full select-none">
+    <aside className="w-64 flex-col shadow bg-card/70 backdrop-blur-md hidden md:flex h-full select-none">
       {/* Brand Header */}
-      <div className="flex h-16 items-center gap-2.5 border-b px-6">
+      <div className="flex h-16 items-center gap-2.5 px-6">
         <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-md shadow-primary/25">
           <ShieldCheck className="h-5 w-5" />
         </div>
         <div className="flex flex-col">
-          <span className="font-bold text-base tracking-tight text-foreground">
-            Hishab-Baksho
-          </span>
+          <BrandWordmark className="text-base" />
           <span className="text-[11px] font-semibold text-primary uppercase tracking-wider">
             SaaS Admin
           </span>
@@ -65,8 +64,8 @@ export function Sidebar() {
       </nav>
 
       {/* Footer Info */}
-      <div className="p-4 border-t text-xs text-muted-foreground">
-        <p className="font-medium text-foreground">Hishab-Baksho ERP</p>
+      <div className="p-4 text-xs text-muted-foreground">
+        <p className="font-medium"><BrandWordmark /></p>
         <p className="text-[11px] text-muted-foreground/80 mt-0.5">SaaS Admin Control Center</p>
       </div>
     </aside>

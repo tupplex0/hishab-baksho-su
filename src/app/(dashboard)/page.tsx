@@ -110,7 +110,7 @@ export default function DashboardPage() {
             <CardTitle className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Subscription Tiers
             </CardTitle>
-            <div className="h-9 w-9 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-600 dark:text-purple-400">
+            <div className="h-9 w-9 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
               <Package className="h-5 w-5" />
             </div>
           </CardHeader>
@@ -171,7 +171,7 @@ export default function DashboardPage() {
             <CardTitle className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Platform Status
             </CardTitle>
-            <div className="h-9 w-9 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
+            <div className="h-9 w-9 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
               <ShieldCheck className="h-5 w-5" />
             </div>
           </CardHeader>

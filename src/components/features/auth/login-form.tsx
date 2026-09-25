@@ -15,8 +15,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ShieldCheck, Lock, Mail, Loader2, ArrowRight } from "lucide-react";
+import { Lock, Mail, Loader2, ArrowRight } from "lucide-react";
 import { fetcher } from "@/services/api";
+import { BrandWordmark } from "@/components/ui/brand-wordmark";
 
 export function LoginForm() {
   const router = useRouter();
@@ -85,10 +86,8 @@ export function LoginForm() {
   return (
     <Card className="w-full shadow-xl border-border/70 backdrop-blur-md bg-card/90">
       <CardHeader className="space-y-2 text-center pb-6">
-        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary ring-8 ring-primary/5">
-          <ShieldCheck className="h-7 w-7" />
-        </div>
-        <CardTitle className="text-2xl font-bold tracking-tight">
+        <BrandWordmark className="mx-auto" />
+        <CardTitle className="text-sm tracking-tight bg-orange-200 w-fit mx-auto py-1 px-3 rounded-full border border-orange-500 text-orange-500">
           SaaS Admin Portal
         </CardTitle>
         <CardDescription className="text-sm">
@@ -131,7 +130,7 @@ export function LoginForm() {
         <CardFooter className="pt-2">
           <Button
             type="submit"
-            className="w-full h-11 text-base font-semibold gap-2 shadow-md shadow-primary/20"
+            className="w-full text-white h-11 text-base font-semibold gap-2 shadow-md shadow-primary/20"
             disabled={loading}
           >
             {loading ? (

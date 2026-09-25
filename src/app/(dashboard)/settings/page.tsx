@@ -67,7 +67,7 @@ export default function SettingsPage() {
         <Card className="border-border/70">
           <CardHeader>
             <div className="flex items-center gap-2">
-              <Server className="h-5 w-5 text-indigo-500" />
+              <Server className="h-5 w-5 text-primary" />
               <CardTitle className="text-lg font-bold">
                 Platform Architecture
               </CardTitle>
